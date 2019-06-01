@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=RaDiX Community
+Name[pt_BR]=Comunidade do RaDiX
+Exec=xdg-open https://forum.radix.ws
+Icon=gtk-help
+Categories=Network;

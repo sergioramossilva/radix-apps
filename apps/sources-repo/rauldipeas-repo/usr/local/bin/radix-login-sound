@@ -1,0 +1,3 @@
+#!/bin/bash
+sleep 5
+paplay /usr/share/sounds/Yaru/stereo/desktop-login.oga

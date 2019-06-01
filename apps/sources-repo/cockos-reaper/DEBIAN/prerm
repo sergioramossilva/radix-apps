@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -rf /opt/REAPER\
+ /usr/share/icons/hicolor/256x256/apps/*cockos*\
+ /usr/share/mime/packages/application-x-reaper.xml

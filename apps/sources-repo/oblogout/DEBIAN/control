@@ -1,0 +1,9 @@
+Package: oblogout
+Version: 0.4-1
+Architecture: amd64
+Maintainer: Andrew Williams <nikdoof@github.com>
+Depends: python-imaging, i3lock-fancy, python-gtk2
+Section: system
+Priority: optional
+Homepage: https://github.com/nikdoof/oblogout
+Description: OBLogout

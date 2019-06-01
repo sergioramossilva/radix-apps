@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Wavosaur
+Terminal=false
+Exec=wavosaur
+Icon=gtkwave
+Categories=AudioVideo;
+StartupWMClass=wavosaur.exe

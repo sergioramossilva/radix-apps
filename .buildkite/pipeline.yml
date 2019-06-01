@@ -1,0 +1,3 @@
+steps:
+  - name: "RaDiX - Build Repo :carrot: :rocket:"
+    command: "bash repo/update-repo.sh"

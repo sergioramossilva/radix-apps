@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=RaDiX Darwin Plymouth
+Description=A Mac OS X like plymouth for RaDiX
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/radix-darwin
+ScriptFile=/usr/share/plymouth/themes/radix-darwin/radix-darwin.script

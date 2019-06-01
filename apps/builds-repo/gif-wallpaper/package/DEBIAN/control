@@ -1,0 +1,9 @@
+Package: gif-wallpaper
+Version: 0.2
+Architecture: amd64
+Maintainer: rauldipeas <rauldipeas@mail.com>
+Depends: gifsicle
+Section: graphics
+Priority: optional
+Homepage: https://github.com/rauldipeas/radix-apps
+Description: GIF Wallpaper

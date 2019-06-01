@@ -1,0 +1,9 @@
+Package: lightdm-webkit-theme-doto
+Version: 0.1
+Architecture: amd64
+Maintainer: Declan Tyson <dec@declantyson.co.uk>
+Depends: lightdm-webkit-greeter
+Section: system
+Priority: optional
+Homepage: https://github.com/declantyson/doto
+Description: Let's try something different, LightDM WebKit theme

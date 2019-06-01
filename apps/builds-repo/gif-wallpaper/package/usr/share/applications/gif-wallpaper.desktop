@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=GIF Wallpaper
+Type=Application
+Exec=/opt/gif-wallpaper/gif-wallpaper.sh %f
+Icon=livewallpaper
+StartupNotify=true
+Categories=Graphics;
+Terminal=false
+NoDisplay=true
+MimeType=image/gif

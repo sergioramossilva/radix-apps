@@ -1,0 +1,9 @@
+Package: betterlockscreen
+Version: 3.0.1
+Architecture: amd64
+Maintainer: Pavan Jadhaw <pavanjadhaw96@gmail.com>
+Depends: i3lock-color
+Section: system
+Priority: optional
+Homepage: https://github.com/pavanjadhaw/betterlockscreen
+Description: Betterlockscreen allows you to cache images with different filters and locking your screen with blazing speed.

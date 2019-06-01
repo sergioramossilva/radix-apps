@@ -1,0 +1,2 @@
+update-alternatives --remove default.plymouth /usr/share/plymouth/themes/radix-darwin/radix-darwin.plymouth
+update-initramfs -u

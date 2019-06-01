@@ -1,0 +1,8 @@
+Package: nerdfonts-dejavu-sans-mono
+Version: 2.0.0
+Architecture: amd64
+Maintainer: Ryan L McIntyre <ryanoasis@github.com>
+Section: system
+Priority: optional
+Homepage: https://nerdfonts.com/
+Description: Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular ‘iconic fonts’ such as Font Awesome, Devicons, Octicons, and others.

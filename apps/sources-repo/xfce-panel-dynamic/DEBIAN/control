@@ -1,0 +1,9 @@
+Package: xfce-panel-dynamic
+Version: 0.1
+Architecture: amd64
+Maintainer: Sayantan Chaudhuri <5310@github.com>
+Depends: xfce4-panel, wmctrl
+Section: desktop
+Priority: optional
+Homepage: https://gist.github.com/5310/1033619bd0c9a14a53c4c3fec82a903a
+Description: XFCE Panel Dynamic

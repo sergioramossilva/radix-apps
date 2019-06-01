@@ -1,0 +1,8 @@
+Origin: radix.ws/repo
+Label: Repositório do RaDiX
+Codename: core
+Architectures: amd64 i386
+Components: main
+Description: Repositório de pacotes do RaDiX
+SignWith: yes
+Pull: core

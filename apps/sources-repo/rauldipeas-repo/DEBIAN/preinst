@@ -1,0 +1,29 @@
+#!/bin/bash
+#rm -rf /etc/apt/sources.list.d/rauldipeas.list*
+wget -O- http://apt.radix.ws/repo/rauldipeas.key | gpg --dearmor > /etc/apt/trusted.gpg.d/rauldipeas.gpg 2> /dev/null
+
+# WINE Staging
+wget -O- https://dl.winehq.org/wine-builds/winehq.key | gpg --dearmor > /etc/apt/trusted.gpg.d/winehq.gpg 2> /dev/null
+echo 'deb https://dl.winehq.org/wine-builds/ubuntu/ disco main #WINE' > /etc/apt/sources.list.d/winehq.list
+
+# NVIDIA
+rm -rf /etc/apt/sources.list.d/graphics-drivers-ubuntu-ppa*
+add-apt-repository -y -n ppa:graphics-drivers/ppa
+sed -i 's/main/main #NVIDIA/g' /etc/apt/sources.list.d/graphics-drivers-ubuntu-ppa*
+
+# Intel/AMD
+rm -rf /etc/apt/sources.list.d/oibaf-ubuntu-graphics-drivers*
+add-apt-repository -y -n ppa:oibaf/graphics-drivers
+sed -i 's/main/main #Intel\/AMD/g' /etc/apt/sources.list.d/oibaf-ubuntu-graphics-drivers*
+
+# Liquorix
+rm -rf /etc/apt/sources.list.d/damentz-ubuntu-liquorix*
+add-apt-repository -y -n ppa:damentz/liquorix
+sed -i 's/main/main #Liquorix/g' /etc/apt/sources.list.d/damentz-ubuntu-liquorix*
+
+# Hardcode-Tray
+rm -rf /etc/apt/sources.list.d/papirus-ubuntu-hardcode-tray*
+sudo add-apt-repository -y -n ppa:papirus/hardcode-tray
+sed -i 's/main/main #Hardcode-Tray/g' /etc/apt/sources.list.d/papirus-ubuntu-hardcode-tray*
+
+apt update -qq

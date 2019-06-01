@@ -1,0 +1,13 @@
+#!/bin/bash
+rm -rf /usr/share/lightdm-webkit/themes/litarvan /etc/lightdm/lightdm-webkit2-greeter.conf
+sed -i 's/webkit2/webkit/g' /etc/lightdm/lightdm.conf 2>/dev/null
+echo '
+[greeter]
+background=/usr/share/backgrounds/radix-default-wallpaper.png
+theme-name=Arc
+webkit-theme=doto
+font-name=FreeSans 11
+xft-antialias=true
+xft-dpi=96
+xft-hintstyle=slight
+xft-rgba=rgb' > /etc/lightdm/lightdm-webkit-greeter.conf

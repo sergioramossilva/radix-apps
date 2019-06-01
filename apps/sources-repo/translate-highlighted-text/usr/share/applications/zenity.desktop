@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Zenity
+Exec=zenity
+Icon=dialog-information
+Terminal=false
+NoDisplay=true

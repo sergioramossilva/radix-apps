@@ -1,0 +1,5 @@
+?package(gnome-alsamixer): needs="x11" section="Applications/Sound" \
+                           title="GNOME ALSA Mixer" \
+                           longtitle="ALSA sound mixer for GNOME" \
+                           command="/usr/bin/gnome-alsamixer" \
+                           icon="/usr/share/pixmaps/gnome-alsamixer/gnome-alsamixer-icon.xpm"

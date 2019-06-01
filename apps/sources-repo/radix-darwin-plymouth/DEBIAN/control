@@ -1,0 +1,9 @@
+Package: radix-darwin-plymouth
+Version: 0.2
+Architecture: amd64
+Maintainer: Raul Dipeas <rauldipeas@mail.com>
+Depends: plymouth
+Section: system
+Priority: optional
+Homepage: http://rauldipeas.gitlab.io
+Description: RaDiX Darwin Plymouth

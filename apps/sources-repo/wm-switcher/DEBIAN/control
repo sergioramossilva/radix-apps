@@ -1,0 +1,9 @@
+Package: wm-switcher
+Version: 1.04-3
+Architecture: amd64
+Maintainer: xircon <xircon@github.com>
+Section: system
+Priority: optional
+Homepage: https://github.com/xircon/wm-switcher
+Depends: python-pyqt5
+Description: Simple GUI python script to switch window managers in linux with minimal dependencies

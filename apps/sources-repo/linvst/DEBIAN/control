@@ -1,0 +1,10 @@
+Package: linvst
+Version: 2.50-1
+Architecture: amd64
+Maintainer: osxmidi <osxmidi@github.com>
+Depends: wineasio, winehq-staging, winetricks, xterm, zenity
+Recommends: q4wine
+Section: audio
+Priority: optional
+Homepage: https://github.com/osxmidi/LinVst
+Description: LinVST

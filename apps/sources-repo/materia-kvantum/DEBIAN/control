@@ -1,0 +1,9 @@
+Package: materia-kvantum
+Version: 20190319
+Architecture: all
+Maintainer: Papirus Development Team <PapirusDevelopmentTeam@github.com>
+Section: x11
+Depends: qt5-style-kvantum, qt5ct
+Priority: optional
+Homepage: https://github.com/PapirusDevelopmentTeam/materia-kde
+Description: Materia KDE - This is a port of the popular GTK theme Materia for Plasma 5 desktop with a few additions and extras.

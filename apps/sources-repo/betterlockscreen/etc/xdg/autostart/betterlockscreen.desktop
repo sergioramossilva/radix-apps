@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=BetterLockScreen
+Exec=betterlockscreen -u /usr/share/backgrounds/radix-default-wallpaper.jpg
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+Icon=gnome-lockscreen

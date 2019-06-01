@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=LinVst
+Exec=linvstconverttree
+Type=Application
+StartupNotify=true
+Icon=application-x-addon
+Categories=AudioVideo;

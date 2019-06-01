@@ -1,0 +1,10 @@
+Package: i3lock-color
+Version: 2.12.c
+Architecture: amd64
+Priority: optional
+Maintainer: Cassandra Fox <cass@fox.mom>
+Section: system
+Homepage: https://github.com/PandorasFox/i3lock-color
+Description: i3lock - improved screen locker
+Depends: feh, libev4
+Removes: i3lock

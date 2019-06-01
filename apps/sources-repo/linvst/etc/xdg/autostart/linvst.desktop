@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=LinVst
+Exec=sh -c "zenity --warning --text='O prefixo do WINE será configurado agora, apenas aguarde...' --icon-name=application-x-addon --no-wrap;xterm -e 'winetricks -q corefonts gdiplus mfc42 vcrun2005 vcrun2013 vcrun2015;winetricks -q --force vcrun2017 win7;regsvr32 wineasio.dll;wine64 regsvr32 wineasio.dll;mkdir -p ~/.config/autostart;echo [Desktop Entry] > ~/.config/autostart/linvst.desktop;echo Hidden=true >> ~/.config/autostart/linvst.desktop;sleep 10'"
+Type=Application
+StartupNotify=true
+Icon=application-x-addon
+Categories=AudioVideo;

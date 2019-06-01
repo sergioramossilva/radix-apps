@@ -1,0 +1,9 @@
+Package: hud-menu
+Version: 0.3
+Architecture: amd64
+Maintainer: JAMcNaughton <jamcnaughton@github.com>
+Depends: rofi
+Section: system
+Priority: optional
+Homepage: https://github.com/jamcnaughton/hud-menu
+Description: HUD-Menu

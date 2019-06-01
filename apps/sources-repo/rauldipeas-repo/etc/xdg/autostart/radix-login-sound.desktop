@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=RaDiX Login Sound
+Name[pt_BR]=Som de login do RaDiX
+Exec=radix-login-sound
+OnlyShowIn=XFCE;

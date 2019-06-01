@@ -1,0 +1,9 @@
+Package: translate-highlighted-text
+Version: 0.2
+Architecture: amd64
+Maintainer: Raul Dipeas <rauldipeas@mail.com>
+Depends: zenity, xsel, xclip
+Section: system
+Priority: optional
+Homepage: http://www.webupd8.org/2016/03/translate-any-text-you-select-on-your.html
+Description: Translate highlighted text

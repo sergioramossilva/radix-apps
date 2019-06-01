@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Volume Icon ALSA
+Exec=sh -c "sleep 5;volumeicon"
+Icon=gnome-alsamixer-icon
+StartupNotify=false
+Terminal=false
+OnlyShowIn=XFCE;

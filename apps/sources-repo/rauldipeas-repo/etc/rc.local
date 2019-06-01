@@ -1,0 +1,7 @@
+#!/bin/sh -e
+cp /opt/radix-desktop/grub /etc/default/grub
+cp /opt/radix-desktop/lsb-release /etc/lsb-release
+cp /opt/radix-desktop/os-release /etc/os-release
+cp /opt/radix-desktop/menus/* /etc/xdg/menus/
+update-grub
+exit 0

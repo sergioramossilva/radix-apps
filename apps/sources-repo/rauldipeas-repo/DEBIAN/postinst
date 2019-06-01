@@ -1,0 +1,159 @@
+#!/bin/bash
+# NeoFetch
+wget -qO /usr/local/bin/neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
+chmod +x /usr/local/bin/neofetch
+# SAMBA
+chmod 1775 /var/lib/samba/usershares/
+sed -i 's/\ dns/\ wins\ dns\ mdns4/g' /etc/nsswitch.conf
+sed -i 's/\#\ \ \ wins\ support\ \=\ no/\ \ \ wins\ support\ \=\ yes/g' /etc/samba/smb.conf
+sed -i 's/workgroup = WORKGROUP/workgroup = WORKGROUP\n   client max protocol = NT1/g' /etc/samba/smb.conf
+# APT Auto Update
+systemctl disable apt-daily.timer
+systemctl disable apt-daily-upgrade.timer
+# Intel SNA
+mkdir -p /etc/X11/xorg.conf.d /opt/intel-sna
+echo 'Section "Device"
+Identifier "Intel Graphics"
+Driver "Intel"
+Option "AccelMethod" "sna"
+Option "TearFree" "true"
+EndSection' > /opt/intel-sna/20-intel.conf
+echo '#!/bin/bash
+pkexec cp /opt/intel-sna/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
+notify-send -i hardinfo "Intel SNA ativo, por favor reinicie a sessão."' > /usr/local/bin/intel-sna;chmod +x /usr/local/bin/intel-sna
+# Radeon TearFree
+mkdir -p /etc/X11/xorg.conf.d /opt/amd-tearfree
+echo 'Section "Device"
+Identifier "Radeon"
+Driver "radeon"
+Option "TearFree" "on"
+EndSection' > /opt/amd-tearfree/20-amd.conf
+echo '#!/bin/bash
+pkexec cp /opt/amd-tearfree/20-amd.conf /etc/X11/xorg.conf.d/20-amd.conf
+notify-send -i hardinfo "AMD TearFree ativo, por favor reinicie a sessão."' > /usr/local/bin/amd-tearfree;chmod +x /usr/local/bin/amd-tearfree
+# NVIDIA DRM
+echo 'options nvidia-drm modeset=1' > /etc/modprobe.d/nvidia-drm-nomodeset.conf
+# HardInfo
+sed -i 's/Icon=\/usr\/share\/hardinfo\/pixmaps\/logo.png/Icon=hardinfo/g' /usr/share/applications/hardinfo.desktop
+# Feh & ImageMagick
+echo Hidden=true | sudo tee -a /usr/share/applications/feh.desktop /usr/share/applications/display-im6.q16.desktop
+# Plymouth
+echo "RESUME=none" > /etc/initramfs-tools/conf.d/resume
+echo "FRAMEBUFFER=y" > /etc/initramfs-tools/conf.d/splash
+# Keyboard Layout
+sed -i 's/us/br/g' /etc/default/keyboard
+# Plank
+cp /usr/share/applications/plank.desktop /etc/xdg/autostart;echo 'OnlyShowIn=XFCE;' >> /etc/xdg/autostart/plank.desktop
+echo '[Desktop Entry]
+Name=Plank Preferences
+Name[pt_BR]=Configurações do Plank
+Categories=Settings;
+Type=Application
+Exec=plank --preferences
+Icon=plank
+Terminal=false
+NoDisplay=false' > /usr/share/applications/plank-preferences.desktop
+# Tilix
+update-alternatives --set x-terminal-emulator /usr/bin/tilix.wrapper
+# Breeze Cursor
+update-alternatives --set x-cursor-theme /etc/X11/cursors/Breeze_Snow.theme
+# Thunar Trash
+cp /usr/share/applications/Thunar-folder-handler.desktop /usr/share/applications/Thunar-plank-trash.desktop
+sed -i 's/Exec=thunar %F/Exec=thunar %u/g' /usr/share/applications/Thunar-plank-trash.desktop
+echo 'NoDisplay=true' >> /usr/share/applications/Thunar-plank-trash.desktop
+sed -i 's/x-scheme-handler\/trash=Thunar-plank-trash.desktop;//g' /usr/share/applications/mimeinfo.cache
+echo 'x-scheme-handler/trash=Thunar-plank-trash.desktop;' >> /usr/share/applications/mimeinfo.cache
+# Tecla Super para abrir o Whisker
+echo '[Desktop Entry]
+Exec=xcape -e "Super_L=Control_L|Escape"
+Name=Xcape
+Type=Application
+OnlyShowIn=XFCE;' > /etc/xdg/autostart/xcape.desktop
+# Natural Scrolling
+echo '#!/bin/bash
+synclient VertScrollDelta=-58
+synclient HorizScrollDelta=-58' > /usr/local/bin/naturalscrolling
+chmod +x /usr/local/bin/naturalscrolling
+echo '[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=NaturalScrolling
+Exec=naturalscrolling
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+Icon=mouse' > /etc/xdg/autostart/NaturalScrolling.desktop
+# Palm Detection
+echo '#!/bin/bash
+syndaemon -i 0.1 -KRd' > /usr/local/bin/palmdetection
+chmod +x /usr/local/bin/palmdetection
+echo '[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=PalmDetection
+Exec=palmdetection
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+Icon=mouse' > /etc/xdg/autostart/PalmDetection.desktop
+# Gestos do touchpad
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+./libinput-gestures-setup install;cd ..
+rm -rf libinput-gestures*
+cp -v /usr/share/applications/libinput-gestures.desktop /etc/xdg/autostart/
+echo '
+OnlyShowIn=XFCE;' >> /etc/xdg/autostart/libinput-gestures.desktop
+echo '
+gesture swipe left 3 xdotool key alt+Left
+gesture swipe right 3 xdotool key alt+Right
+gesture swipe up 4 xfdashboard -t' >> /etc/libinput-gestures.conf
+git clone https://gitlab.com/cunidev/gestures
+cd gestures; python3 setup.py install;cd ..;rm -rf gestures*
+sed -i 's/Icon=org.cunidev.gestures/Icon=libinput-gestures/g' /usr/share/applications/org.cunidev.gestures.desktop
+sed -i 's/Name=Gestures/Name=Gestures\nName[pt_BR]=Gestos/g' /usr/share/applications/org.cunidev.gestures.desktop
+echo 'StartupWMClass=Gestures' >> /usr/share/applications/org.cunidev.gestures.desktop
+# Bash-It/Undistract-Me
+echo "[Desktop Entry]
+Type=Application
+Name=Bash It
+Exec=bash /opt/radix-desktop/bash_it.sh
+Icon=xterm
+StartupNotify=true" > /etc/xdg/autostart/bash_it.desktop
+echo "#!/bin/bash
+bash ~/.bash_it/install.sh --silent
+sed -i 's/bobby/powerline/g' ~/.bashrc
+echo '
+# Undistract-Me
+. /usr/share/undistract-me/long-running.bash
+notify_when_long_running_commands_finish_install' >> ~/.bashrc
+mkdir -p ~/.config/autostart
+echo [Desktop Entry] > ~/.config/autostart/bash_it.desktop
+echo 'Hidden=true' >> ~/.config/autostart/bash_it.desktop" > /opt/radix-desktop/bash_it.sh
+sed -i 's/took/levou/g' /usr/share/undistract-me/long-running.bash
+sed -i 's/dialog-information/xterm/g' /usr/share/undistract-me/long-running.bash
+sed -i 's/Long\ command\ completed/Comando\ concluído\!/g' /usr/share/undistract-me/long-running.bash
+# Suru++
+wget -qO- https://git.io/fhQdI | sh
+wget -qO- https://raw.githubusercontent.com/gusbemacbe/suru-plus/master/install.sh | sh
+wget -qO- https://raw.githubusercontent.com/gusbemacbe/suru-plus-dark/master/install.sh | sh
+suru-plus-folders -C blue --theme Suru++
+suru-plus-folders -C blue --theme Suru++-Light
+cp -r /usr/share/icons/Suru++/places/{32*,48*,scalable*} /usr/share/icons/Suru++-Dark/places/
+suru-plus-folders -C blue --theme Suru++-Dark
+# Hardcode-Tray
+hardcode-tray --apply --only rambox.electron,rambox --size 16 --theme Papirus-Dark;rm -rf /~rauldipeas
+hardcode-tray --apply --only slack --size 16 --theme Papirus-Dark;rm -rf /~rauldipeas
+# PulseAudio Realtime
+sudo sed -i 's/; realtime/realtime/g' /etc/pulse/daemon.conf
+# Update Settings
+#/etc/rc.local
+
+#https://github.com/Foggalong/hardcode-fixer
+
+# AppGrid Theme
+#sed -i 's/Exec=\/usr\/share\/appgrid\/appgrid.py %u/Exec=sh -c "env GTK_THEME=Arc \/usr\/share\/appgrid\/appgrid.py %u"/g' /usr/share/applications/appgrid.desktop
