@@ -1,5 +1,5 @@
 Package: gif-wallpaper
-Version: 0.2
+Version: 0.3
 Architecture: amd64
 Maintainer: rauldipeas <rauldipeas@mail.com>
 Depends: gifsicle

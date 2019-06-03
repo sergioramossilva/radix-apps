@@ -18,10 +18,6 @@ find repo/packages -name '*.deb' -type f | xargs dpkg-sig --sign builder
 
 find repo/packages -name '*.deb' -type f | xargs reprepro -P --ask-passphrase -Vb website/repo includedeb core
 
-#rm -rf ../../Azure\ DevOps/radix-website/website/repo;cp -rv website/repo ../../Azure\ DevOps/radix-website/website/
-
-#m -rf website/repo/dists website/repo/db website/repo/pool repo/packages/*
-
 mkdir radix-repo;cd radix-repo;mv -v ../website .;git init
 
 git config --global user.email "rauldipeas@mail.com"
