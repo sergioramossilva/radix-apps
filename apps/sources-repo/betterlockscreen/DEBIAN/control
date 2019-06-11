@@ -1,5 +1,5 @@
 Package: betterlockscreen
-Version: 3.0.1
+Version: 3.0.2
 Architecture: amd64
 Maintainer: Pavan Jadhaw <pavanjadhaw96@gmail.com>
 Depends: i3lock-color

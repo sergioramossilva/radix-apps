@@ -2,6 +2,15 @@
 
 sudo apt update;sudo apt install -y reprepro dpkg-sig
 
+chmod +x -v\
+ apps/sources-repo/hud-menu/opt/hud-menu/*\
+ apps/sources-repo/rauldipeas-repo/etc/rc.local\
+ apps/sources-repo/wm-switcher/opt/wm-switcher/*
+
+for bindir in $(find apps/sources-repo -type d -name bin); do chmod +x -v $bindir/* ; done
+
+for debdir in $(find apps/sources-repo -type d -name DEBIAN); do chmod +x -v $debdir/p* ; done
+
 ls repo/sources > repo/packages.list
 
 for package in $(cat repo/packages.list); do dpkg-deb -b repo/sources/$package repo/packages/ ; done

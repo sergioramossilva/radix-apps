@@ -1,5 +1,5 @@
 Package: translate-highlighted-text
-Version: 0.2
+Version: 0.3
 Architecture: amd64
 Maintainer: Raul Dipeas <rauldipeas@mail.com>
 Depends: zenity, xsel, xclip

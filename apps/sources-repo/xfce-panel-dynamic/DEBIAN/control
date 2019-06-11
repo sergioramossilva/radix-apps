@@ -1,5 +1,5 @@
 Package: xfce-panel-dynamic
-Version: 0.1
+Version: 0.2
 Architecture: amd64
 Maintainer: Sayantan Chaudhuri <5310@github.com>
 Depends: xfce4-panel, wmctrl

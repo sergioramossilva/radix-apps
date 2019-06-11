@@ -1,5 +1,5 @@
 Package: hud-menu
-Version: 0.3
+Version: 0.4
 Architecture: amd64
 Maintainer: JAMcNaughton <jamcnaughton@github.com>
 Depends: rofi

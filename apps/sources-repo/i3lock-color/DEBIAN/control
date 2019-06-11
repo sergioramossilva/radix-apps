@@ -3,7 +3,7 @@ Priority: extra
 Section: system
 Maintainer: Cassandra Fox <cass@fox.mom>
 Architecture: amd64
-Version: 2.12.c-2
+Version: 2.12.c-3
 Replaces: i3lock
 Description: i3lock - improved screen locker
 Depends: feh, libev4, libxcb-composite0
