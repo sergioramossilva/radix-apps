@@ -4,4 +4,4 @@ mkdir -p ~/.config/autostart
 cp /usr/share/applications/gif-wallpaper.desktop ~/.config/autostart/
 cp $1 ~/.gif-wallpaper.gif
 sed -i 's/Exec=\/opt\/gif-wallpaper\/gif-wallpaper.sh %f/Exec=sh -c "sleep 8;\/opt\/gif-wallpaper\/gif-wallpaper.sh .gif-wallpaper.gif"/g' ~/.config/autostart/gif-wallpaper.desktop
-xwinwrap -g `xdpyinfo | awk '/dimensions/{print $2}'` -ni -s -nf -b -un -argb -st -ov -- gifview -a -w WID $1
+xwinwrap -g `xdpyinfo | awk '/dimensions/{print $2}'` -ni -fdt -s -nf -b -un -argb -st -ov -- gifview -a -w WID $1
