@@ -4,6 +4,6 @@ Terminal=false
 Type=Application
 Name=RaDiX Community
 Name[pt_BR]=Comunidade do RaDiX
-Exec=xdg-open https://forum.radix.ws
+Exec=sh -c 'xdg-open https://gitter.im/radix-community/support;xdg-open https://quire.io/w/RaDiX'
 Icon=gtk-help
 Categories=Network;
