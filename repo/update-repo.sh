@@ -33,7 +33,8 @@ git config --global user.email "rauldipeas@mail.com"
 
 git config --global user.name "Raul Dipeas"
 
-git remote add origin git@ssh.dev.azure.com:v3/rauldipeas/radix-website/radix-repo
+#git remote add origin git@ssh.dev.azure.com:v3/rauldipeas/radix-website/radix-repo
+git remote add origin git@gitlab.com:rauldipeas/radix-repo.git
 
 git add .;git commit -m "buildkite auto release"
 
