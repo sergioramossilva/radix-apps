@@ -1,5 +1,5 @@
 Package: cockos-reaper
-Version: 5978
+Version: 5979
 Architecture: amd64
 Maintainer: Justin Frankel <justinfrankel@reaper.fm>
 Depends: cadence | ubuntustudio-controls | qjackctl

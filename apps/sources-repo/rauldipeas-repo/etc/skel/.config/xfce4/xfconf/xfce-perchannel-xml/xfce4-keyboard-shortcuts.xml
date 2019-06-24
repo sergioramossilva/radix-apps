@@ -66,6 +66,7 @@
       <property name="XF86Calculator" type="string" value="galculator"/>
       <property name="&lt;Super&gt;e" type="string" value="mousepad"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;p" type="string" value="pavucontrol"/>
+      <property name="AudioMute" type="string" value="amixer -q -D pulse sset Master toggle"/>
       <property name="Alt_L" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
