@@ -19,9 +19,11 @@ cp -v repo/web-packages/* repo/packages/
 
 cp -v /var/lib/buildkite-agent/davinci-resolve*.deb repo/packages/
 
-cp -v repo/builds/windowck/*.deb repo/packages/
-
 cp -v repo/builds/gif-wallpaper/*.deb repo/packages/
+
+cp -v repo/builds/gamemode/*.deb repo/packages/
+
+cp -v repo/builds/windowck/*.deb repo/packages/
 
 find repo/packages -name '*.deb' -type f | xargs dpkg-sig --sign builder
 
