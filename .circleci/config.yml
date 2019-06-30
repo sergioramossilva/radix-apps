@@ -1,10 +1,8 @@
-# Use the latest 2.1 version of CircleCI pipeline processing engine, see https://circleci.com/docs/2.0/configuration-reference/
 version: 2.1
+executors:
+  docker:
+    - image: circleci/node:bionic
 
-docker:
-      - image: circleci/node:bionic
-
-# Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
   jobs:
     deploy:
       steps:
