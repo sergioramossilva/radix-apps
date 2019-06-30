@@ -31,14 +31,14 @@ find repo/packages -name '*.deb' -type f | xargs dpkg-sig --sign builder
 
 find repo/packages -name '*.deb' -type f | xargs reprepro -P --ask-passphrase -Vb website/repo includedeb core
 
-mkdir radix-repo;cd radix-repo;mv -v ../website .;git init
+#mkdir radix-repo;cd radix-repo;mv -v ../website .;git init
 
-git config --global user.email "rauldipeas@mail.com"
+#git config --global user.email "rauldipeas@mail.com"
 
-git config --global user.name "Raul Dipeas"
+#git config --global user.name "Raul Dipeas"
 
-git remote add origin git@ssh.dev.azure.com:v3/rauldipeas/RaDiX/radix-repo
+#git remote add origin git@ssh.dev.azure.com:v3/rauldipeas/RaDiX/radix-repo
 
-git add .;git commit -m "buildkite auto release"
+#git add .;git commit -m "buildkite auto release"
 
-git push -f -u origin master
+#git push -f -u origin master
