@@ -14,4 +14,4 @@ jobs:
             gpg --allow-secret-key-import --import rauldipeas_sec.gpg
             bash repo/update-repo.sh
             sudo npm install -g --silent netlify-cli
-            netlify deploy --site=1e662434-7648-4ef9-a0c4-6866163984a6 --dir=website --prod
+            netlify deploy --site=005c4fd0-8706-46a9-9d94-55e2c952dc5e --dir=website --prod

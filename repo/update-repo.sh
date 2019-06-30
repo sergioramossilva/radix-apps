@@ -2,6 +2,8 @@
 
 sudo apt update;sudo apt install -y reprepro dpkg-sig
 
+#bash repo/builds/resolve/build/resolve.sh
+
 chmod +x -v\
  apps/sources-repo/hud-menu/opt/hud-menu/*\
  apps/sources-repo/rauldipeas-repo/etc/rc.local\
@@ -17,7 +19,7 @@ for package in $(cat repo/packages.list); do dpkg-deb -b repo/sources/$package r
 
 cp -v repo/web-packages/* repo/packages/
 
-cp -v /var/lib/buildkite-agent/davinci-resolve*.deb repo/packages/
+#cp -v repo/builds/resolve/*.deb repo/packages/
 
 cp -v repo/builds/gif-wallpaper/*.deb repo/packages/
 
