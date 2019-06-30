@@ -1,8 +1,6 @@
 version: 2
 jobs:
   build:
-    environment:
-      NETLIFY_ACCESS_TOKEN: A_NETLIFY_ACCESS_TOKEN
     docker:
       - image: circleci/node:latest
     steps:
