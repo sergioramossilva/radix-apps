@@ -18,7 +18,7 @@ for package in $(cat repo/packages.list); do dpkg-deb -b repo/sources/$package r
 cp -v repo/web-packages/* repo/packages/
 
 #cp -v repo/builds/resolve/*.deb repo/packages/
-wget -c https://bitbucket.org/rauldipeas/davinci-resolve/raw/1ca3a798ac70b6a9a905a126a9a7045675a91510/davinci-resolve_16.0b4-1_amd64.deb
+wget -cO repo/packages/davinci-resolve_16.0b4-1_amd64.deb https://www.dropbox.com/s/vqvn93tow2fh28g/davinci-resolve_16.0b4-1_amd64.deb?dl=1
 
 cp -v repo/builds/gif-wallpaper/*.deb repo/packages/
 
