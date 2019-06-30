@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update;sudo apt install -y reprepro dpkg-sig xorriso
+sudo apt update;sudo apt install -y reprepro dpkg-sig xorriso fakeroot
 
 bash repo/builds/resolve/build/resolve.sh
 
