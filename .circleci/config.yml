@@ -5,9 +5,13 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - "15:96:54:e7:0a:78:74:1f:13:45:1b:57:ec:9a:60:66"
+      - run:
+          name: Import GPG key
+          command: |
+          wget https://gist.githubusercontent.com/rauldipeas/4c718477023baee2448083b4de263187/raw/31e4617d811369972150226e31bcd6ca4ba71662/rauldipeas_pub.gpg
+          wget https://gist.githubusercontent.com/rauldipeas/4c718477023baee2448083b4de263187/raw/31e4617d811369972150226e31bcd6ca4ba71662/rauldipeas_sec.gpg
+          gpg --import rauldipeas_pub.gpg
+          gpg --allow-secret-key-import rauldipeas_sec
       - run:
           name: Build APT Repository
           command: bash repo/update-repo.sh
