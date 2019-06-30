@@ -4,4 +4,5 @@ wget -O makeresolvedeb.tar.gz http://www.danieltufvesson.com/download/?file=make
 unzip DaVinci_Resolve*.zip;tar -vzxf makeresolvedeb*.tar.gz
 sed -i 's/Icon=\/opt\/resolve\/graphics\/DV_Resolve.png/Icon=resolve/g' makeresolvedeb*.sh
 sed -i 's/Architecture: amd64/Architecture: amd64\nDepends: curlew, ocl-icd-libopencl1\nSection: video/g' makeresolvedeb*.sh
+rm -rfv DaVinci_Resolve*.zip
 ./makeresolvedeb*.sh lite;rm -rfv *.pdf *.run makeresolvedeb*;mv *.deb ../
