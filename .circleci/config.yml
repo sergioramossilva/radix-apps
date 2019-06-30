@@ -1,13 +1,10 @@
 version: 2.1
-executors:
-  my-executor:
-    docker:
-      - image: circleci/node:bionic
-
 jobs:
-  my-job:
-    executor: my-executor
-      steps:
+  build:
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - checkout
       - run:
         name: Build APT Repository
         command: bash repo/update-repo.sh
