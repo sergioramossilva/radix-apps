@@ -11,7 +11,7 @@ jobs:
             wget https://gist.githubusercontent.com/rauldipeas/4c718477023baee2448083b4de263187/raw/31e4617d811369972150226e31bcd6ca4ba71662/rauldipeas_pub.gpg
             wget https://gist.githubusercontent.com/rauldipeas/4c718477023baee2448083b4de263187/raw/31e4617d811369972150226e31bcd6ca4ba71662/rauldipeas_sec.gpg
             gpg --import rauldipeas_pub.gpg
-            gpg --allow-secret-key-import rauldipeas_sec
+            gpg --allow-secret-key-import rauldipeas_sec.gpg
       - run:
           name: Build APT Repository
           command: bash repo/update-repo.sh
