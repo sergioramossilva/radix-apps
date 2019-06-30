@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Build APT Repository
-        command: bash repo/update-repo.sh
+        - name: Build APT Repository
+        - command: bash repo/update-repo.sh
       - run:
         - name: Install netlify-cli
         - command: sudo npm install -g --silent netlify-cli
