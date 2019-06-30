@@ -1,9 +1,8 @@
 version: 2.1
-executors:
-  docker:
-    - image: circleci/node:bionic
-
   jobs:
+    build:
+      docker:
+        - image: circleci/node:bionic
     deploy:
       steps:
         - checkout
