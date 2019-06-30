@@ -161,7 +161,7 @@
       <Category>Office</Category>
     </Include>
     <Exclude>
-      <Category>Utility<Category>
+      <Category>Utility</Category>
     </Exclude>
   </Menu>
 
