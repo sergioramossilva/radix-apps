@@ -8,6 +8,10 @@ chmod +x -v\
  apps/sources-repo/wm-switcher/opt/wm-switcher/*
 
  find ./ -type d -exec chmod -v 755 {} \;
+ find ./ -type f -name postinst -exec chmod -v 555 {} \;
+ find ./ -type f -name preinst -exec chmod -v 555 {} \;
+ find ./ -type f -name postrm -exec chmod -v 555 {} \;
+ find ./ -type f -name prerm -exec chmod -v 555 {} \;
 
 for bindir in $(find apps/sources-repo -type d -name bin); do chmod +x -v $bindir/* ; done
 
