@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update;sudo apt install -y reprepro dpkg-sig #xorriso fakeroot
+apt update;apt install -y reprepro dpkg-sig #xorriso fakeroot
 
 chmod +x -v\
  apps/sources-repo/hud-menu/opt/hud-menu/*\
