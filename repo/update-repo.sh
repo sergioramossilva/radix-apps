@@ -7,6 +7,8 @@ chmod +x -v\
  apps/sources-repo/rauldipeas-repo/etc/rc.local\
  apps/sources-repo/wm-switcher/opt/wm-switcher/*
 
+ find ./ -type d -exec chmod -v 755 {} \;
+
 for bindir in $(find apps/sources-repo -type d -name bin); do chmod +x -v $bindir/* ; done
 
 for debdir in $(find apps/sources-repo -type d -name DEBIAN); do chmod +x -v $debdir/p* ; done
