@@ -13,9 +13,7 @@ steps:
 - task: DownloadSecureFile@1
   inputs:
     secureFile: rauldipeas_sec.gpg
-    secureFile: rauldipeas_pub.gpg
 - script: |
-    gpg --import $(Agent.TempDirectory)/rauldipeas_pub.gpg
     gpg --allow-secret-key-import --import $(Agent.TempDirectory)/rauldipeas_sec.gpg
     bash repo/update-repo.sh
     npm install -g --silent netlify-cli
