@@ -1,9 +1,0 @@
-image: node:latest
-
-job:
-  script:
-    - gpg --import $GPG_PUB
-    - gpg --allow-secret-key-import --import $GPG_SEC
-    - bash repo/update-repo.sh
-    - npm install -g --silent netlify-cli
-    - netlify deploy --site=005c4fd0-8706-46a9-9d94-55e2c952dc5e --dir=website --prod
