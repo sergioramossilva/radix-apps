@@ -23,10 +23,8 @@ for package in $(cat repo/packages.list); do dpkg-deb -b repo/sources/$package r
 
 cp -v repo/web-packages/* repo/packages/
 
-bash repo/builds/resolve/build/resolve.sh
-
-cp -v repo/builds/resolve/*.deb repo/packages/
-#wget -cO repo/packages/davinci-resolve_16.0b4-1_amd64.deb https://www.dropbox.com/s/vqvn93tow2fh28g/davinci-resolve_16.0b4-1_amd64.deb?dl=1
+#cp -v repo/builds/resolve/*.deb repo/packages/
+wget -cO repo/packages/davinci-resolve_16.0b4-1_amd64.deb https://www.dropbox.com/s/vqvn93tow2fh28g/davinci-resolve_16.0b4-1_amd64.deb?dl=1
 
 cp -v repo/builds/gif-wallpaper/*.deb repo/packages/
 

@@ -6,4 +6,4 @@ sed -i 's/Icon=\/opt\/resolve\/graphics\/DV_Resolve.png/Icon=resolve/g' makereso
 sed -i 's/Architecture: amd64/Architecture: amd64\nDepends: curlew, ocl-icd-libopencl1\nSection: video/g' makeresolvedeb*.sh
 sed -i 's/fakeroot dpkg-deb -b/rm -rfv DaVinci_Resolve*.run\nfakeroot dpkg-deb -b/g' makeresolvedeb*.sh
 rm -rfv DaVinci_Resolve*.zip
-./makeresolvedeb*.sh lite;rm -rfv *.pdf *.run makeresolvedeb*;mv *.deb repo/builds/resolve/
+./makeresolvedeb*.sh lite;rm -rfv *.pdf *.run makeresolvedeb*;mv *.deb ../
