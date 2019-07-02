@@ -11,11 +11,11 @@ pool:
 
 steps:
 - task: DownloadSecureFile@1
-  inputs:
-    secureFile: rauldipeas_sec.gpg
+    inputs:
+      secureFile: rauldipeas_sec.gpg
 - task: DownloadSecureFile@2
-  inputs:
-    secureFile: rauldipeas_pub.gpg
+    inputs:
+      secureFile: rauldipeas_pub.gpg
 - script: |
       gpg --import rauldipeas_pub.gpg
       gpg --allow-secret-key-import --import rauldipeas_sec.gpg
