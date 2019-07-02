@@ -22,7 +22,7 @@ steps:
     bash repo/update-repo.sh
     npm install -g --silent netlify-cli
     netlify deploy --site=005c4fd0-8706-46a9-9d94-55e2c952dc5e --dir=website --prod
-    displayName: 'RaDiX - Build APT Repository'
+  displayName: 'RaDiX - Build APT Repository'
 
 variables:
 - group: Netlify
