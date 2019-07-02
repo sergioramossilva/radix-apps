@@ -14,11 +14,9 @@ steps:
   inputs:
     secureFile: rauldipeas_sec.gpg
 - script: |
-    echo $GPG_PUB > ~/rauldipeas_pub.gpg; gpg --import ~/rauldipeas_pub.gpg
     gpg --allow-secret-key-import --import $(Agent.TempDirectory)/rauldipeas_sec.gpg
     bash repo/update-repo.sh
-    sudo apt install -y npm
-    sudo npm install -g --silent netlify-cli
+    sudo apt install -y npm ; sudo npm install -g --silent netlify-cli
     netlify deploy --site=005c4fd0-8706-46a9-9d94-55e2c952dc5e --dir=website --prod
   displayName: 'RaDiX - Build APT Repository'
 
