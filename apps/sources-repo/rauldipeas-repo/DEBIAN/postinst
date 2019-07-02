@@ -148,10 +148,9 @@ suru-plus-folders -C blue --theme Suru++-Dark
 # Hardcode-Tray
 hardcode-tray --apply --only rambox.electron,rambox --size 16 --theme Papirus-Dark;rm -rf /~rauldipeas
 hardcode-tray --apply --only slack --size 16 --theme Papirus-Dark;rm -rf /~rauldipeas
+hardcode-tray --apply --only skypeforlinux --size 16 --theme Papirus-Dark;rm -rf /~rauldipeas
 # PulseAudio Realtime
 sudo sed -i 's/; realtime/realtime/g' /etc/pulse/daemon.conf
-# Update Settings
-#/etc/rc.local
 
 #https://github.com/Foggalong/hardcode-fixer
 
