@@ -10,7 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  displayName: 'RaDiX - Build APT Repository'
   - task: DownloadSecureFile@1
     inputs:
       secureFile: rauldipeas_sec.gpg
