@@ -14,13 +14,13 @@ steps:
     inputs:
       secureFile: rauldipeas_sec.gpg
   - script: gpg --allow-secret-key-import --import $(Agent.TempDirectory)/rauldipeas_sec.gpg
-  displayName: 'Import secure GPG'
+    displayName: 'Import secure GPG'
   - script: bash repo/update-repo.sh
-  displayName: 'RaDiX - Build APT Repository'
+    displayName: 'RaDiX - Build APT Repository'
   - script: sudo apt install -y npm ; sudo npm install -g --silent netlify-cli
-  displayName: 'Install Netlify CLI'
+    displayName: 'Install Netlify CLI'
   - script: netlify deploy --site=005c4fd0-8706-46a9-9d94-55e2c952dc5e --dir=website --prod
-  displayName: 'Netlify deploy'
+    displayName: 'Netlify deploy'
 
 variables:
   - group: Netlify
