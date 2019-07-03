@@ -23,7 +23,7 @@ for package in $(cat repo/packages.list); do dpkg-deb -b repo/sources/$package r
 
 cp -v repo/web-packages/* repo/packages/
 
-wget -cO repo/packages/davinci-resolve_16.0b4-1_amd64.deb https://www.dropbox.com/s/vqvn93tow2fh28g/davinci-resolve_16.0b4-1_amd64.deb?dl=1
+wget -cO repo/packages/davinci-resolve_16.0b4-1_amd64.deb "https://dev.azure.com/rauldipeas/3e4b2d1f-40fd-42ac-87a3-1227d6054860/_apis/git/repositories/c3bff216-a4e1-4447-b201-06f13964d845/Items?path=%2Fdavinci-resolve_16.0b4-1_amd64.deb&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&download=true&resolveLfs=true&%24format=octetStream&api-version=5.0-preview.1"
 
 cp -v repo/builds/gif-wallpaper/*.deb repo/packages/
 

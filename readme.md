@@ -94,6 +94,11 @@ Papel de parede animado com imagens GIF
 
 `sudo apt install gif-wallpaper`
 
+### Snaptastic
+Insalador gráfico para pacotes _Snap_
+
+`sudo apt install com.github.bartzaalberg.snaptastic`
+
 ### WindowCK
 Botões de janela para o painel do **XFCE**
 
@@ -106,6 +111,11 @@ Drivers de áudio
 
 `sudo apt install alsa-firmware`
 
+### AppImage Daemon
+Integrador automático de pacotes AppImage
+
+`sudo apt install appimaged`
+
 ### Eddy
 Instalador de pacotes _deb_
 
@@ -116,15 +126,20 @@ Compositor de tela
 
 `sudo apt install compiz-reloaded-core`
 
-### Curlew
+### FF Multi Converter
 Conversor de arquivos de mídia
 
-`sudo apt install curlew`
+`sudo apt install ffmulticonverter`
 
 ### LightDM Webkit Greeter
 _Greeter_ para o gerenciador de sessão
 
 `sudo apt install lightdm-webkit-greeter`
+
+### qView
+Visualizador de imagens
+
+`sudo apt install qview`
 
 ### Rambox
 Comunicador social
