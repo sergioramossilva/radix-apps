@@ -7,5 +7,5 @@ job:
   script:
     - gpg --allow-secret-key-import --import $GPG_SEC
     - bash repo/update-repo.sh
-    - apt install -y npm ; npm install -g --silent netlify-cli
+    - npm install -g --silent netlify-cli
     - netlify deploy --site=005c4fd0-8706-46a9-9d94-55e2c952dc5e --dir=website --prod
