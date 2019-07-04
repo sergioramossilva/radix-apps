@@ -14,7 +14,7 @@ for debdir in $(find apps/sources-repo -type d -name DEBIAN); do chmod +x -v $de
 ls repo/sources > repo/packages.list
 for package in $(cat repo/packages.list); do dpkg-deb -b repo/sources/$package repo/packages/ ; done
 cp -v repo/web-packages/* repo/packages/
-wget -cO repo/packages/davinci-resolve_16.0b4-1_amd64.deb https://gitlab.com/rauldipeas/davinci-resolve/raw/master/davinci-resolve_16.0b4-1_amd64.deb
+wget -c https://davinci-resolve.netlify.com/davinci-resolve_16.0b5-1_amd64.deb
 cp -v repo/builds/gif-wallpaper/*.deb repo/packages/
 cp -v repo/builds/gamemode/*.deb repo/packages/
 cp -v repo/builds/snaptastic/*.deb repo/packages/
