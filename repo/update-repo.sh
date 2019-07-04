@@ -14,7 +14,7 @@ for debdir in $(find apps/sources-repo -type d -name DEBIAN); do chmod +x -v $de
 ls repo/sources > repo/packages.list
 for package in $(cat repo/packages.list); do dpkg-deb -b repo/sources/$package repo/packages/ ; done
 cp -v repo/web-packages/* repo/packages/
-wget -cO repo/packages/davinci-resolve_16.0b4-1_amd64.deb "https://dev.azure.com/rauldipeas/3e4b2d1f-40fd-42ac-87a3-1227d6054860/_apis/git/repositories/c3bff216-a4e1-4447-b201-06f13964d845/Items?path=%2Fdavinci-resolve_16.0b4-1_amd64.deb&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&download=true&resolveLfs=true&%24format=octetStream&api-version=5.0-preview.1"
+wget -cO repo/packages/davinci-resolve_16.0b4-1_amd64.deb https://gitlab.com/rauldipeas/davinci-resolve/raw/master/davinci-resolve_16.0b4-1_amd64.deb
 cp -v repo/builds/gif-wallpaper/*.deb repo/packages/
 cp -v repo/builds/gamemode/*.deb repo/packages/
 cp -v repo/builds/snaptastic/*.deb repo/packages/
