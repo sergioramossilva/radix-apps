@@ -4,11 +4,9 @@ job:
   except:
     changes:
       - readme.md
-  before_script:
+  script:
     - echo $GPG_SEC > rauldipeas_sec.gpg
     - gpg --allow-secret-key-import --import rauldipeas_sec.gpg
-  script:
     - bash repo/update-repo.sh
-  after_script:
-    - sudo apt install -y npm ; sudo npm install -g --silent netlify-cli
+    - apt install -y npm ; sudo npm install -g --silent netlify-cli
     - netlify deploy --site=005c4fd0-8706-46a9-9d94-55e2c952dc5e --dir=website --prod
