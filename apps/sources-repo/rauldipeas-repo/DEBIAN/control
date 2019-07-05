@@ -1,5 +1,5 @@
 Package: rauldipeas-repo
-Version: 2.2
+Version: 2.3
 Architecture: amd64
 Maintainer: Raul Dipeas <rauldipeas@mail.com>
 Pre-Depends: git, libnss-winbind, lightdm, samba, software-properties-common, wget, winbind, tilix

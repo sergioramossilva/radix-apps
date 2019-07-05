@@ -1,0 +1,27 @@
+Package: ffmulticonverter
+Source: ffmulticonverter-dmo
+Version: 1.8.0-dmo3-1
+Architecture: all
+Bugs: mailto:marillat@deb-multimedia.org
+Maintainer: Christian Marillat <marillat@deb-multimedia.org>
+Installed-Size: 1333
+Depends: python3:any (>= 3.3.2-2~), python3-pyqt5, ffmpeg, imagemagick
+Suggests: unoconv
+Section: utils
+Priority: optional
+Homepage: https://sites.google.com/site/ffmulticonverter/home
+Description: File format converter (audio, video, image and documents)
+ FF Multi Converter is a simple graphical application that enables you to
+ convert audio, video, image and document files between all popular formats,
+ using and combining other programs.
+ .
+ It uses ffmpeg for audio/video files, unoconv for document files and
+ PythonMagick library for image file conversions. Common conversion options
+ for each file type are provided. Recursive conversions are available too.
+ .
+ Features:
+  * Conversions for several file formats.
+  * Very easy to use interface.
+  * Access to common conversion options.
+  * Options for saving and naming files.
+  * Recursive conversions.

@@ -162,6 +162,7 @@
     </Include>
     <Exclude>
       <Category>Utility</Category>
+      <Category>AudioVideo</Category>
     </Exclude>
   </Menu>
 
