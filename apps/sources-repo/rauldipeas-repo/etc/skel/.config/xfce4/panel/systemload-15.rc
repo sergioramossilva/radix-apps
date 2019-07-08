@@ -3,7 +3,7 @@ Timeout=250
 Timeout_Seconds=1
 Use_Timeout_Seconds=true
 Use_Click_Command=true
-Click_Command=gnome-usage
+Click_Command=xfce4-taskmanager
 
 [SL_Cpu]
 Enabled=true
@@ -25,4 +25,3 @@ Text=Swap
 
 [SL_Uptime]
 Enabled=true
-
