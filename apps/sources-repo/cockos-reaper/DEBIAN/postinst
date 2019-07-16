@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /tmp
-wget -c http://reaper.fm/files/5.x/reaper5979_linux_x86_64.tar.xz
+wget -c http://reaper.fm/files/5.x/reaper5980_linux_x86_64.tar.xz
 tar -Jxf reaper*_linux_x86_64.tar.xz;cd reaper_linux_x86_64
 ./install-reaper.sh --install /opt --integrate-desktop --usr-local-bin-symlink --quiet
 
