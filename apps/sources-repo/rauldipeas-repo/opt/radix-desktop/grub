@@ -8,7 +8,7 @@ GRUB_HIDDEN_TIMEOUT=0
 GRUB_HIDDEN_TIMEOUT_QUIET=true
 GRUB_TIMEOUT=10
 GRUB_DISTRIBUTOR="RaDiX - Core"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off"
 GRUB_CMDLINE_LINUX=""
 
 # Uncomment to enable BadRAM filtering, modify to suit your needs
