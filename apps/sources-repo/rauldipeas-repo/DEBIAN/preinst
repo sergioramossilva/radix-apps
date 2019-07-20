@@ -25,10 +25,12 @@ sed -i 's/main/main #Liquorix/g' /etc/apt/sources.list.d/damentz-ubuntu-liquorix
 rm -rf /etc/apt/sources.list.d/papirus-ubuntu-papirus-dev*
 add-apt-repository -y -n ppa:papirus/papirus-dev
 sed -i 's/main/main #Papirus Development/g' /etc/apt/sources.list.d/papirus-ubuntu-papirus-dev*
+sed -i 's/eoan/disco/g' /etc/apt/sources.list.d/papirus-ubuntu-papirus-dev*
 
 # Hardcode-Tray
 rm -rf /etc/apt/sources.list.d/papirus-ubuntu-hardcode-tray*
 add-apt-repository -y -n ppa:papirus/hardcode-tray
 sed -i 's/main/main #Hardcode-Tray/g' /etc/apt/sources.list.d/papirus-ubuntu-hardcode-tray*
+sed -i 's/eoan/disco/g' /etc/apt/sources.list.d/papirus-ubuntu-hardcode-tray*
 
 apt update -qq
