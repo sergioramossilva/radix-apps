@@ -2,7 +2,7 @@
 sudo apt install -y libdbus-1-dev libsystemd-dev meson ninja-build pkg-config
 git clone https://github.com/FeralInteractive/gamemode.git
 cd gamemode
-git checkout 1.3.1
+git checkout 1.4
 sed -i '33d;34d;35d;36d;37d;38d;39d;40d' bootstrap.sh
 ./bootstrap.sh
 mkdir -p -v ../../package/usr/lib/x86_64-linux-gnu ../../package/usr/bin ../../package/usr/libexec ../../package/usr/include ../../package/usr/share/man/man8 ../../package/usr/lib/x86_64-linux-gnu/pkgconfig ../../package/etc/systemd/user ../../package/usr/share/dbus-1/services ../../package/usr/share/polkit-1/actions
