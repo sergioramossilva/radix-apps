@@ -1,5 +1,5 @@
 Package: linvst
-Version: 2.50-1
+Version: 2.55
 Architecture: amd64
 Maintainer: osxmidi <osxmidi@github.com>
 Depends: wineasio, winehq-staging, winetricks, xterm, zenity
